@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyShop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f4f9;
+            margin: 0;
+            color: #222;
+        }
+        header {
+            background: #182747;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        main {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 12px;
+        }
+        .product {
+            background: white;
+            margin: 12px 0;
+            padding: 18px;
+            border-radius: 12px;
+        }
+        .price {
+            color: #087f5b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyShop</h1>
+        <p>My demo online store</p>
+    </header>
+    <main>
+        <h2>Our Products</h2>
+        {% for product in products %}
+        <div class="product">
+            <h3>{{ product.name }}</h3>
+            <p class="price">{{ product.price }} DZD</p>
+        </div>
+        {% endfor %}
+        <p>Demo store - no real payments.</p>
+    </main>
+</body>
+</html>
